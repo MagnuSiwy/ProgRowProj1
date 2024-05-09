@@ -46,8 +46,8 @@ int main() {
       }
 
       for (int j = firstMultiple; j <= n; j += j) {
-        if (result[j-m]) 
-          result[j-m] = false;}
+        if (result[j - m])
+          result[j - m] = false;
       }
     }
   }
