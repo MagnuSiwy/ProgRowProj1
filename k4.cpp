@@ -28,8 +28,10 @@ int main() {
     }
   }
 
+  int sqrtn = sqrt(n);
+
 #pragma omp parallel for
-  for (int i = 2; i * i <= n; i++) {
+  for (int i = 2; i <= sqrtn; i++) {
     if (primeArray[i]) {
       int firstMultiple = (m / i);
 
