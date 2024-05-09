@@ -32,7 +32,7 @@ int main() {
 
   int sqrtn = sqrt(n);
 
-#pragma omp parallel for
+#pragma omp parallel for num_threads(THREADS_COUNT)
   for (int i = 2; i <= sqrtn; i++) {
     if (primeArray[i]) {
       int firstMultiple = (m / i);

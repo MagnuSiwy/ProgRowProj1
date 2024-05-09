@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-#pragma omp parallel
+#pragma omp parallel num_threads(THREADS_COUNT)
   {
 #pragma omp for
     for (int i = m; i <= n; i++) {

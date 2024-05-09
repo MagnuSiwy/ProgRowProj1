@@ -24,7 +24,7 @@ int main() {
   if ((n - m) % blockSize != 0) {
     numberOfBlocks++;
   }
-#pragma omp parallel for
+#pragma omp parallel for num_threads(THREADS_COUNT)
   for (int i = 0; i < numberOfBlocks; i++) {
     int low = m + i * blockSize;
     int high = m + i * blockSize + blockSize;
