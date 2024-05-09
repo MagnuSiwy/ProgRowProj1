@@ -1,7 +1,19 @@
 #include <iostream>
+#include <cmath>
+#include <cstring>
+#include <stdexcept>
+#include <cstdlib>
 
-int main()
+int main(int argc, char* argv[])
 {
+    if(argc < 2)
+    {
+        throw std::invalid_argument("Not enough arguments");
+    }
+
+    int m = atoi(argv[0]);
+    int n = atoi(argv[1]);
+    
     bool* result = (bool*)malloc((n - m + 1) * sizeof(bool));
     memset(result, true, (n - m + 1) * sizeof(bool));
 
@@ -14,7 +26,8 @@ int main()
         {
             if (primeArray[j] == true && i % j == 0) 
             { 
-                primeArray[i] = false; break;
+                primeArray[i] = false; 
+                break;
             }
         }
     }
@@ -28,7 +41,8 @@ int main()
             {
                 if (primeArray[j] == true && i % j == 0) 
                 { 
-                    result[i - m] = false;break;
+                    result[i - m] = false;
+                    break;
                 }
             }
         }
