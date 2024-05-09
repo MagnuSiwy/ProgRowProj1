@@ -5,8 +5,10 @@
 #include <string.h>
 #include <time.h>
 
+#include "consts.h"
+
 int main(int argc, char *argv[]) {
-  long int m = 2, n = 1000000;
+  long int m = M_VAL, n = N_VAL;
   clock_t ppstart, ppstop;
   double pswtime, pewtime;
 
