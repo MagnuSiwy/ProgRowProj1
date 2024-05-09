@@ -4,17 +4,18 @@ Wersja pierwsza
 
 ### Autorzy
 
-**Grupa dziekańska:** 4`<br>`
-**Grupa labolatoryjna:** 7`<br>`
-**Termin zajęć:** czwartek, 16:50`<br>`
+**Grupa dziekańska:** 4  
+**Grupa labolatoryjna:** 7  
+**Termin zajęć:** czwartek, 16:50
 
-Tymoteusz Jagła 151811 - tymoteusz.jagla@student.put.poznan.pl`<br>`
+
+Tymoteusz Jagła 151811 - tymoteusz.jagla@student.put.poznan.pl  
 Kaper Magnuszewski 151746 - kacper.magnuszewski@student.put.poznan.pl
 
 ### Sprawozdanie
 
-_Wymagany termin oddania sprawozdania -_ 10.05.2024 `<br>`
-_Rzeczywisty termin oddania sprawozdania -_ 10.05.2024 `<br>`
+_Wymagany termin oddania sprawozdania -_ 10.05.2024  
+_Rzeczywisty termin oddania sprawozdania -_ 10.05.2024  
 
 ## Opis zadania
 
@@ -28,7 +29,9 @@ Projekt polegał na zbadaniu efektywności przetwarzania równoległego w komput
 - Liczba procesorów fizycznych: 14
 - Liczba procesorów logicznych: 20
 - Oznaczenie typu procesora: KF
-- Wielkość pamięci podręcznej: 24MB
+- Wielkość pamięci podręcznej: 
+  - L1: 24 MB
+  - L2: 20 MB
 - Organizacja pamięci podręcznej: Intel® Smart Cache
 
 ### System Operacyjny
@@ -58,7 +61,7 @@ Poniższy kod to podejście sekwencyjne. Mierzony jest czas pracy procesora za p
 
 
 ### Liczby pierwsze wyznaczane równolegle przez dzielenie w zakresie <m,n>
-Poniższy blok to równoległa implementacja kodu z poprzedniego zadania. 
+Poniższy blok to równoległa implementacja kodu z poprzedniego zadania. W tym celu użyta została biblioteka `OpenMP`. W określonym obszarze równoległym, każdemu z wątków zostaje przydzielona kolejna wartość iteratora pętli `i`, który przyjmuje wartości w przedziale <m, n>.
 ```cpp
 
 ```
