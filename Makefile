@@ -6,6 +6,11 @@ EXECS := $(SRCS:.cpp=)
 
 all: $(EXECS)
 
+pdf: Sprawozdanie.pdf
+
+Sprawozdanie.pdf: Sprawozdanie.md
+	pandoc $< -o $@
+
 %: %.cpp builddir
 	$(CC) $(CFLAGS) $< -o build/$@
 
