@@ -10,7 +10,7 @@ all: $(EXECS)
 	$(CC) $(CFLAGS) $< -o build/$@
 
 builddir:
-	mkdir build
+	@mkdir -p build
 
 clean:
 	rm -rf build/
