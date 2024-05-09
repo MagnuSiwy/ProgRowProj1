@@ -19,6 +19,7 @@ Sprawozdanie.pdf: Sprawozdanie.md
 	vtune -collect hotspots --result-dir=vtune/hs_$@ build/$@
 	vtune -collect performance-snapshot --result-dir=vtune/ps_$@ build/$@ 
 	vtune -collect threading --result-dir=vtune/th_$@ build/$@ 
+	vtune -collect uarch-exploration --result-dir=vtune/ue_$@ build/$@ 
 
 builddir:
 	@mkdir -p build

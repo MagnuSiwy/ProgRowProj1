@@ -1,0 +1,168 @@
+threads_spec: cpu
+Using CPUID GenuineIntel-6-B7-1
+DEBUGINFOD_URLS=
+Compression enabled, disabling build id collection at the end of the session.
+nr_threads: 20
+thread_masks[0]: 0x60c8f9012800: maps mask[20]: 0
+thread_masks[0]: 0x60c8f9012810: affinity mask[20]: 0
+thread_masks[1]: 0x60c8f9012820: maps mask[20]: 1
+thread_masks[1]: 0x60c8f9012830: affinity mask[20]: 1
+thread_masks[2]: 0x60c8f9012840: maps mask[20]: 2
+thread_masks[2]: 0x60c8f9012850: affinity mask[20]: 2
+thread_masks[3]: 0x60c8f9012860: maps mask[20]: 3
+thread_masks[3]: 0x60c8f9012870: affinity mask[20]: 3
+thread_masks[4]: 0x60c8f9012880: maps mask[20]: 4
+thread_masks[4]: 0x60c8f9012890: affinity mask[20]: 4
+thread_masks[5]: 0x60c8f90128a0: maps mask[20]: 5
+thread_masks[5]: 0x60c8f90128b0: affinity mask[20]: 5
+thread_masks[6]: 0x60c8f90128c0: maps mask[20]: 6
+thread_masks[6]: 0x60c8f90128d0: affinity mask[20]: 6
+thread_masks[7]: 0x60c8f90128e0: maps mask[20]: 7
+thread_masks[7]: 0x60c8f90128f0: affinity mask[20]: 7
+thread_masks[8]: 0x60c8f9012900: maps mask[20]: 8
+thread_masks[8]: 0x60c8f9012910: affinity mask[20]: 8
+thread_masks[9]: 0x60c8f9012920: maps mask[20]: 9
+thread_masks[9]: 0x60c8f9012930: affinity mask[20]: 9
+thread_masks[10]: 0x60c8f9012940: maps mask[20]: 10
+thread_masks[10]: 0x60c8f9012950: affinity mask[20]: 10
+thread_masks[11]: 0x60c8f9012960: maps mask[20]: 11
+thread_masks[11]: 0x60c8f9012970: affinity mask[20]: 11
+thread_masks[12]: 0x60c8f9012980: maps mask[20]: 12
+thread_masks[12]: 0x60c8f9012990: affinity mask[20]: 12
+thread_masks[13]: 0x60c8f90129a0: maps mask[20]: 13
+thread_masks[13]: 0x60c8f90129b0: affinity mask[20]: 13
+thread_masks[14]: 0x60c8f90129c0: maps mask[20]: 14
+thread_masks[14]: 0x60c8f90129d0: affinity mask[20]: 14
+thread_masks[15]: 0x60c8f90129e0: maps mask[20]: 15
+thread_masks[15]: 0x60c8f90129f0: affinity mask[20]: 15
+thread_masks[16]: 0x60c8f9012a00: maps mask[20]: 16
+thread_masks[16]: 0x60c8f9012a10: affinity mask[20]: 16
+thread_masks[17]: 0x60c8f9012a20: maps mask[20]: 17
+thread_masks[17]: 0x60c8f9012a30: affinity mask[20]: 17
+thread_masks[18]: 0x60c8f9012a40: maps mask[20]: 18
+thread_masks[18]: 0x60c8f9012a50: affinity mask[20]: 18
+thread_masks[19]: 0x60c8f9012a60: maps mask[20]: 19
+thread_masks[19]: 0x60c8f9012a70: affinity mask[20]: 19
+nr_cblocks: 0
+affinity: SYS
+mmap flush: 1
+comp level: 1
+Problems creating module maps, continuing anyway...
+WARNING: Kernel address maps (/proc/{kallsyms,modules}) are restricted,
+check /proc/sys/kernel/kptr_restrict and /proc/sys/kernel/perf_event_paranoid.
+
+Samples in kernel functions may not be resolved if a suitable vmlinux
+file is not found in the buildid cache or in the vmlinux path.
+
+Samples in kernel modules won't be resolved at all.
+
+If some relocation was applied (e.g. kexec) symbols may be misresolved
+even with a suitable vmlinux or kallsyms file.
+
+mmap size 528384B
+Couldn't record kernel reference relocation symbol
+Symbol resolution may be skewed if relocation was used (e.g. kexec).
+Check /proc/kallsyms permission or run as root.
+couldn't open /proc/1/task/1/maps
+couldn't open /proc/452/task/452/maps
+couldn't open /proc/486/task/486/maps
+couldn't open /proc/760/task/760/maps
+couldn't open /proc/820/task/820/maps
+couldn't open /proc/821/task/821/maps
+couldn't open /proc/822/task/822/maps
+couldn't open /proc/823/task/823/maps
+couldn't open /proc/824/task/824/maps
+couldn't open /proc/826/task/826/maps
+couldn't open /proc/827/task/827/maps
+couldn't open /proc/828/task/828/maps
+couldn't open /proc/830/task/830/maps
+couldn't open /proc/833/task/833/maps
+couldn't open /proc/837/task/837/maps
+couldn't open /proc/839/task/839/maps
+couldn't open /proc/841/task/841/maps
+couldn't open /proc/846/task/846/maps
+couldn't open /proc/852/task/852/maps
+couldn't open /proc/854/task/854/maps
+couldn't open /proc/860/task/860/maps
+couldn't open /proc/862/task/862/maps
+couldn't open /proc/867/task/867/maps
+couldn't open /proc/876/task/876/maps
+couldn't open /proc/901/task/901/maps
+couldn't open /proc/941/task/941/maps
+couldn't open /proc/966/task/966/maps
+couldn't open /proc/975/task/975/maps
+couldn't open /proc/1000/task/1000/maps
+couldn't open /proc/1016/task/1016/maps
+couldn't open /proc/1018/task/1018/maps
+couldn't open /proc/1094/task/1094/maps
+couldn't open /proc/1395/task/1395/maps
+couldn't open /proc/1435/task/1435/maps
+couldn't open /proc/1737/task/1737/maps
+couldn't open /proc/1738/task/1738/maps
+couldn't open /proc/1813/task/1813/maps
+couldn't open /proc/1947/task/1947/maps
+couldn't open /proc/2054/task/2054/maps
+couldn't open /proc/2147/task/2147/maps
+couldn't open /proc/2261/task/2261/maps
+couldn't open /proc/2262/task/2262/maps
+couldn't open /proc/2293/task/2293/maps
+couldn't open /proc/2637/task/2637/maps
+couldn't open /proc/2719/task/2719/maps
+couldn't open /proc/3040/task/3040/maps
+couldn't open /proc/3296/task/3296/maps
+couldn't open /proc/8135/task/8135/maps
+couldn't open /proc/8136/task/8136/maps
+couldn't open /proc/8137/task/8137/maps
+couldn't open /proc/8145/task/8145/maps
+couldn't open /proc/8146/task/8146/maps
+couldn't open /proc/8154/task/8154/maps
+couldn't open /proc/8155/task/8155/maps
+couldn't open /proc/8158/task/8158/maps
+couldn't open /proc/8159/task/8159/maps
+couldn't open /proc/15901/task/15901/maps
+couldn't open /proc/28585/task/28585/maps
+threads[46030]: started on cpu1
+threads[46031]: started on cpu2
+threads[46032]: started on cpu3
+threads[46033]: started on cpu4
+threads[46034]: started on cpu5
+threads[46035]: started on cpu6
+threads[46036]: started on cpu7
+threads[46037]: started on cpu8
+threads[46038]: started on cpu9
+threads[46039]: started on cpu10
+threads[46040]: started on cpu11
+threads[46041]: started on cpu12
+threads[46042]: started on cpu13
+threads[46043]: started on cpu14
+threads[46044]: started on cpu15
+threads[46045]: started on cpu16
+threads[46046]: started on cpu17
+threads[46047]: started on cpu18
+threads[46048]: started on cpu19
+threads[46028]: started on cpu0
+
+46029:perf-sync:ready:TSC=23397475572974
+[ perf record: Woken up 1 times to write data ]
+threads[46028]: samples=3, wakes=1, transferred=512, compressed=209
+threads[46030]: samples=1, wakes=2, transferred=15872, compressed=2526
+threads[46031]: samples=1, wakes=2, transferred=10208, compressed=1290
+threads[46032]: samples=1, wakes=2, transferred=288, compressed=129
+threads[46033]: samples=1, wakes=2, transferred=8288, compressed=1173
+threads[46034]: samples=2, wakes=2, transferred=624, compressed=214
+threads[46035]: samples=0, wakes=2, written=0
+threads[46036]: samples=0, wakes=2, written=0
+threads[46037]: samples=1, wakes=2, transferred=9920, compressed=1205
+threads[46038]: samples=0, wakes=2, written=0
+threads[46039]: samples=3, wakes=2, transferred=11648, compressed=1488
+threads[46040]: samples=1, wakes=2, transferred=288, compressed=124
+threads[46041]: samples=1, wakes=2, transferred=11488, compressed=1494
+threads[46042]: samples=1, wakes=2, transferred=17888, compressed=2596
+threads[46043]: samples=3, wakes=2, transferred=12816, compressed=1680
+threads[46044]: samples=1, wakes=2, transferred=416, compressed=192
+threads[46045]: samples=1, wakes=2, transferred=672, compressed=215
+threads[46046]: samples=1, wakes=2, transferred=2784, compressed=480
+threads[46047]: samples=1, wakes=2, transferred=10000, compressed=1413
+threads[46048]: samples=1, wakes=2, transferred=9664, compressed=1846
+failed to write feature CPU_PMU_CAPS
+[ perf record: Captured and wrote 8.644 MB /home/jagtym/Programming/ProgRowProj1/vtune/ue_k2/data.0/system-wide.perf, compressed (original 0.118 MB, ratio is 6.751) ]
