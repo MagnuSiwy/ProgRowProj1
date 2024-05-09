@@ -19,7 +19,7 @@ int main() {
   pswtime = omp_get_wtime();
   ppstart = clock();
 
-  int blockSize = 32;
+  int blockSize = BLOCKSIZE;
   int numberOfBlocks = (n - m) / blockSize;
   if ((n - m) % blockSize != 0) {
     numberOfBlocks++;
