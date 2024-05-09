@@ -49,7 +49,8 @@ int main() {
   ppstop = clock();
   pewtime = omp_get_wtime();
 
-  printf("Dzielenie szeregowe\n");
+  printf(
+      "Sito równoległe domenowe z potencjalną lokalnością dostępu do danych\n");
   printf("Czas procesorow przetwarzania rownoleglego: %f sekund\n",
          ((double)(ppstop - ppstart) / CLOCKS_PER_SEC));
   printf("Czas trwania obliczen rownoleglych - wallclock: %f sekund\n",
