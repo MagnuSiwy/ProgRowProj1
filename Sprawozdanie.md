@@ -29,9 +29,7 @@ Projekt polegał na zbadaniu efektywności przetwarzania równoległego w komput
 - Liczba procesorów fizycznych: 14
 - Liczba procesorów logicznych: 20
 - Oznaczenie typu procesora: KF
-- Wielkość pamięci podręcznej: 
-  - L1: 24 MB
-  - L2: 20 MB
+- Wielkość pamięci podręcznej: 24 MB
 - Organizacja pamięci podręcznej: Intel® Smart Cache
 
 ### System Operacyjny
@@ -69,28 +67,28 @@ Jeżeli wątkom przydzielone zostałyby kolejne wartości `i` mógłby również
 
 
 ### Sito sekwencyjne bez lokalności dostępu do danych
-Poniższy kod to sekwencyjna implementacja algorytmu sita Erastothenesa. Pierwsza pętla programu ponownie wyznacza liczby pierwsze
+Poniższy kod to sekwencyjna implementacja algorytmu sita Erastothenesa. Pierwsza pętla programu ponownie wyznacza liczby pierwsze w zakresie <2, n>. Druga pętla identyfikuje liczby pierwsze w zakresie <m, n> i oznacza jako liczby złożone ich wielokrotności. W ten sposób w tablicy wynikowej otrzymujemy jedynie liczby pierwsze.
 ```cpp
 
 ```
 
 
 ### Sito równoległe funkcyjne bez lokalności dostępu do danych
+Poniższy kod to równoległa implementacja poprzedniego zadania znajdowania liczb pierwszych przy użyciu algorytmu sita Erastothenes'a. W podanym algorytmie występuje brak lokalności przestrzennej danych, co spowodowane jest możliwością odczytywania przez wątki komórek tablicy `result`, które dzielą tą samą linię cache. Działanie programu może zostać znacząco spowolnione.
+```cpp
 
+```
+
+
+### Sito równoległe funkcyjne bez lokalności dostępu do danych (False Sharing)
+Jest to implementacja kodu z zadania poprzedniego, w której dodatkowo sprawdzana jest wartość tablicy `result` w komórce, do której program chciałby wpisać wartość `false`. Oznacza to, że możemy uniknąć wielu nadmiernych unieważnień pamięci poprzez ograniczenie ilości prób niepotrzebnych zmian wartości tablicy wynikowej.
 ```cpp
 
 ```
 
 
 ### Sito równoległe domenowe z potencjalną lokalnością dostępu do danych
-
-```cpp
-
-```
-
-
-### Sito równoległe domenowe z potencjalną lokalnością dostępu do danych
-
+Poniższy kod również przedstawia algorytm sita Erastothenesa, jednak dodatkowo stosuje taktykę podziału obszaru roboczego na bloki. Dzięki takiemu rozwiązaniu możemy uniknąć false sharingu, a co za tym idzie znacznie przyspieszyć wykonywanie się programu. Najlepszy efekt osiągniemy, jeżeli wielkość bloku dostosujemy do długości linii pamięci. Dzięki temu unikniemy niepotrzebnych odczytów w linii pamięci przez różne wątki, a co za tym idzie jej unieważniania. 
 ```cpp
 
 ```
