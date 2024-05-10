@@ -12,7 +12,7 @@ all: $(EXECS)
 pdf: Sprawozdanie.pdf
 
 Sprawozdanie.pdf: Sprawozdanie.md
-	pandoc $< -o $@
+	pandoc --listing $< -o $@
 
 %: %.cpp builddir vtunedir
 	$(CC) $(CFLAGS) $< -o build/$@
