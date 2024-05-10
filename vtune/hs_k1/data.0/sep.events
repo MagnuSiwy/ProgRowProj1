@@ -3,7 +3,7 @@ Group 0:
 INST_RETIRED.ANY: event id 2
 CPU_CLK_UNHALTED.THREAD: event id 0
 CPU_CLK_UNHALTED.REF_TSC: event id 1
-TOPDOWN.SLOTS: event id 13
+TOPDOWN.SLOTS:perf_metrics: event id 13
 CPU_CLK_UNHALTED.DISTRIBUTED: event id 3
 FP_ARITH_INST_RETIRED.SCALAR_SINGLE: event id 4
 FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE: event id 5
@@ -14,7 +14,7 @@ FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE: event id 9
 UOPS_EXECUTED.X87: event id 10
 
 CCCR
-reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = f000000ff
+reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = 1000f000000ff
 reg_type       = 1	event_id       = g	reg_id         = 390	reg_value      = f000000ff
 reg_type       = 1	event_id       = g	reg_id         = 3f1	reg_value      = f000000ff
 reg_type       = 1	event_id       = g	reg_id         = 1d9	reg_value      = 1800
@@ -50,12 +50,12 @@ Group 1:
 INST_RETIRED.ANY: event id 2
 CPU_CLK_UNHALTED.THREAD: event id 0
 CPU_CLK_UNHALTED.REF_TSC: event id 1
-TOPDOWN.SLOTS: event id 13
+TOPDOWN.SLOTS:perf_metrics: event id 13
 UOPS_RETIRED.SLOTS: event id 11
 UOPS_EXECUTED.THREAD: event id 12
 
 CCCR
-reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = f00000003
+reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = 1000f00000003
 reg_type       = 1	event_id       = g	reg_id         = 390	reg_value      = f00000003
 reg_type       = 1	event_id       = g	reg_id         = 3f1	reg_value      = f00000003
 reg_type       = 1	event_id       = g	reg_id         = 1d9	reg_value      = 1800
@@ -80,15 +80,17 @@ Group 0:
 INST_RETIRED.ANY: event id 2
 CPU_CLK_UNHALTED.THREAD: event id 0
 CPU_CLK_UNHALTED.REF_TSC: event id 1
+TOPDOWN_RETIRING.ALL: event id 14
 
 CCCR
-reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = 700000000
-reg_type       = 1	event_id       = g	reg_id         = 390	reg_value      = 700000000
-reg_type       = 1	event_id       = g	reg_id         = 3f1	reg_value      = 700000000
+reg_type       = 1	event_id       = g	reg_id         = 38f	reg_value      = 700000001
+reg_type       = 1	event_id       = g	reg_id         = 390	reg_value      = 700000001
+reg_type       = 1	event_id       = g	reg_id         = 3f1	reg_value      = 700000001
 reg_type       = 1	event_id       = g	reg_id         = 1d9	reg_value      = 1800
 reg_type       = 1	event_id       = g	reg_id         = 38d	reg_value      = 333
 reg_type       = 1	event_id       = g	reg_id         = 3f2	reg_value      = 0
 reg_type       = 1	event_id       = g	reg_id         = 14ce	reg_value      = 0
+reg_type       = 1	event_id       = 14	reg_id         = 186	reg_value      = 4300c2
 
 ESCR
 
@@ -96,4 +98,5 @@ DATA
 reg_type       = 4	event_id       = 2	reg_id         = 309	reg_value      = ffffffca9820
 reg_type       = 4	event_id       = 0	reg_id         = 30a	reg_value      = ffffffca9820
 reg_type       = 4	event_id       = 1	reg_id         = 30b	reg_value      = ffffffca9820
+reg_type       = 4	event_id       = 14	reg_id         = c1	reg_value      = ffffffe17b7d
 
