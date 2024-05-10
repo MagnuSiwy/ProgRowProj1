@@ -27,7 +27,11 @@ Projekt polegał na zbadaniu efektywności przetwarzania równoległego w komput
 
 - Model: 13th Gen Intel® Core(TM) i5-13600KF
 - Liczba procesorów fizycznych: 14
+  - 6 Performance-cores
+  - 8 Efficient-cores
 - Liczba procesorów logicznych: 20
+  - 2 wątki na pojedyńczy Performance-core
+  - 1 wątek na pojedyńczy Effitient-core
 - Oznaczenie typu procesora: KF
 - Taktowanie procesora:
   - Minimalne: 800MHz
@@ -61,7 +65,7 @@ W osobnym pliku nagłówkowym zostały zdefiniowane stałe takie jak:
 ~~~
 
 
-### Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie w zakresie <m, n> (k1)
+### Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie w zakresie $<m, n>$ (k1)
 Poniższy kod to podejście sekwencyjne. Mierzony jest czas pracy procesora za pomocą zmiennych `spstart` i `spstop` oraz rzeczywisty czas pracy programu za pomocą `sswtime` i `sewtime`. Tablica `primeArray` przechowuje zmienne typu `bool` - pierwiastki liczby `n`, które są liczbami pierwszymi. Program metodą dzielenia wyznacza tablicę `primeArray`, po czym korzystając z wartości do niej wpisanych sprawdza wszystkie liczby z zakresu podanego w pliku nagłówkowym. Jeżeli dana liczba nie jest podzielna przez żaden z podzielników `n`, oznacza to, że jest to liczba pierwsza. W takim wypadku jest ona zapisywana do tablicy wynikowej `result`.
 
 ~~~ { #K1 .cpp .numberLines caption="Kod 1. Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie"}
@@ -118,8 +122,8 @@ int main(int argc, char *argv[]) {
 ~~~
 
 
-### Liczby pierwsze wyznaczane równolegle przez dzielenie w zakresie <m,n> (k2)
-Poniższy blok to równoległa implementacja kodu z poprzedniego zadania. W tym celu użyta została biblioteka `OpenMP`. W określonym obszarze równoległym, każdemu z wątków zostaje przydzielona wartość iteratora pętli `i`, który przyjmuje wartości w przedziale <m, n>. W tej wersji programu możemy ustawić różne wartości klauzuli `schedule`. Przy wartości `static` wątkom zostaną przydzielone różne liczby z zakresu <m, n>, co oznacza, że niektóre wątki zbadają mniej liczb niż inne, jeżeli badane liczby będą wyjątkowo duże. Ten przydział może okazać się niesprawiedliwy i wpłynąć na czas wykonywania programu.   
+### Liczby pierwsze wyznaczane równolegle przez dzielenie w zakresie $<m,n>$ (k2)
+Poniższy blok to równoległa implementacja kodu z poprzedniego zadania. W tym celu użyta została biblioteka `OpenMP`. W określonym obszarze równoległym, każdemu z wątków zostaje przydzielona wartość iteratora pętli `i`, który przyjmuje wartości w przedziale $<m, n>$. W tej wersji programu możemy ustawić różne wartości klauzuli `schedule`. Przy wartości `static` wątkom zostaną przydzielone różne liczby z zakresu $<m, n>$, co oznacza, że niektóre wątki zbadają mniej liczb niż inne, jeżeli badane liczby będą wyjątkowo duże. Ten przydział może okazać się niesprawiedliwy i wpłynąć na czas wykonywania programu.   
 Jeżeli wątkom przydzielone zostałyby kolejne wartości `i` mógłby również wystąpić false-sharing. Oznacza to, że wątki mogłyby nadpisywać tą samą linię pamięci, co znacząco spowolniłoby program. W tym wypadku false-sharing pojawiłby się poprzez nadpisywanie części tablicy `result` znajdujących się w tych samych liniach pamięci.
 ```cpp
 
@@ -127,27 +131,27 @@ Jeżeli wątkom przydzielone zostałyby kolejne wartości `i` mógłby również
 
 
 ### Sito sekwencyjne bez lokalności dostępu do danych (k3)
-Poniższy kod to sekwencyjna implementacja algorytmu sita Erastothenesa. Pierwsza pętla programu ponownie wyznacza liczby pierwsze w zakresie <2, n>. Druga pętla identyfikuje liczby pierwsze w zakresie <m, n> i oznacza jako liczby złożone ich wielokrotności. W ten sposób w tablicy wynikowej otrzymujemy jedynie liczby pierwsze.
+Poniższy kod to sekwencyjna implementacja algorytmu sita Erastothenesa. Pierwsza pętla programu ponownie wyznacza liczby pierwsze w zakresie $<2, n>$. Druga pętla identyfikuje liczby pierwsze w zakresie $<m, n>$ i oznacza jako liczby złożone ich wielokrotności. W ten sposób w tablicy wynikowej otrzymujemy jedynie liczby pierwsze.
 ```cpp
 
 ```
 
 ### Sito sekwencyjne z potencjalną lokalnością dostępu do danych (k3a)
-
+Poniższy kod przedstawia sekwencyjna implementację algorytmu sita Erastothenesa. Program został zmodyfikowany względem poprzednika. Została dodana lokalność dostępu do danych w oparciu o koncepcję lokalnego sita domenowego.
 ```cpp
 
 ```
 
 
 ### Sito równoległe funkcyjne bez lokalności dostępu do danych (k4)
-Poniższy kod to równoległa implementacja poprzedniego zadania znajdowania liczb pierwszych przy użyciu algorytmu sita Erastothenes'a. W podanym algorytmie występuje brak lokalności dostępu do danych, co spowodowane jest możliwością odczytywania przez wątki komórek tablicy `result`, które dzielą tą samą linię cache. Działanie programu może zostać znacząco spowolnione.
+Poniższy kod to równoległa implementacja poprzedniego zadania znajdowania liczb pierwszych przy użyciu algorytmu sita Erastothenes'a. W podanym algorytmie występuje brak lokalności dostępu do danych, co spowodowane jest możliwością odczytywania przez wątki komórek tablicy `result`, które dzielą tą samą linię cache (występuje false-sharing). Działanie programu może zostać przez to znacząco spowolnione.
 ```cpp
 
 ```
 
 
 ### Sito równoległe funkcyjne bez lokalności dostępu do danych (k4a)
-Jest to implementacja kodu z zadania poprzedniego, w której dodatkowo sprawdzana jest wartość tablicy `result` w komórce, do której program chciałby wpisać wartość `false`. Oznacza to, że możemy uniknąć wielu nadmiernych unieważnień pamięci poprzez ograniczenie ilości prób niepotrzebnych zmian wartości tablicy wynikowej.
+Jest to implementacja kodu z zadania poprzedniego, w której dodatkowo sprawdzana jest wartość tablicy `result` w komórce, do której program chciałby wpisać wartość `false`. Oznacza to, że możemy uniknąć wielu nadmiernych unieważnień pamięci oraz ograniczyć ilość prób niepotrzebnych zmian wartości tablicy wynikowej.
 ```cpp
 
 ```
@@ -158,3 +162,21 @@ Poniższy kod również przedstawia algorytm sita Erastothenesa, jednak dodatkow
 ```cpp
 
 ```
+
+
+## Wnioski
+Aby przeprowadzić eksperyment obliczeniowo-pomiarowy, wykorzystaliśmy funkcję "Microarchitecture Exploration" dostępną w programie Intel VTune. Ta funkcja umożliwia analizę efektywności przetwarzania. W ramach tego trybu zbierane są dane podczas działania procesora za pomocą jednostek monitorujących wydajność.  
+Programy sekwencyjne zostały uruchomione jednokrotnie, a ich równoległe odpowiedniki w dwóch wariantach. Z racji, że procesor posiada 6 Performance-cores oraz 8 Efficient-cores postanowiliśmy uruchomić program dla ograniczonej części rdzeni typu Performance (Nie jesteśmy jednak pewni jakich rdzeni procesor używa w danym momencie, gdyż nie zostało to opisane), czyli dla 4 procesorów oraz dla połowy maksymalnej liczby procesorów logicznych, która wynosi 10.  
+
+Przetwarzane przez nas przedziały, to:
+  - $<2, MAX>$, gdzie $MAX = 10^8$
+  - $<2, MAX / 2>$, gdzie $MAX = 10^8$
+  - $<MAX / 2, MAX>$, gdzie $MAX = 10^8$
+
+
+### Liczby pierwsze wyznaczane sekwencyjnie poprzez dzielenie oraz metodą sita (k1, k3, k3a)
+W poniższej tabeli znajdują się wyniki przetwarzania dla metod sekwencyjnych.
+
+
+### Liczby pierwsze wyznaczane równolegle poprzez dzielenie oraz metodą sita (k2, k4, k4a, k5)
+W poniższej tabeli znajdują się wyniki przetwarzania dla metod równoległych podejściem funkcyjnym (k2, k4, k4a) oraz domenowym (k5).
