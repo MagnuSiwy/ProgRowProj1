@@ -473,6 +473,7 @@ int main() {
 ### Sito równoległe domenowe z potencjalną lokalnością dostępu do danych (k5)
 Poniższy kod również przedstawia algorytm sita Erastothenesa, jednak dodatkowo stosuje taktykę podziału obszaru roboczego na bloki. Dzięki takiemu rozwiązaniu możemy uniknąć false sharingu, a co za tym idzie znacznie przyspieszyć wykonywanie się programu. Najlepszy efekt osiągniemy, jeżeli wielkość bloku dostosujemy do długości linii pamięci. Dzięki temu unikniemy niepotrzebnych odczytów w linii pamięci przez różne wątki, a co za tym idzie jej unieważniania. 
 
+  **Kod 5. Sito równoległe domenowe z potencjalną lokalnością dostępu do danych***
 ~~~ { #K5 .cpp .numberLines caption="Kod 5. Sito równoległe domenowe z potencjalną lokalnością dostępu do danych"}
 #include <math.h>
 #include <omp.h>
@@ -548,6 +549,17 @@ Przetwarzane przez nas przedziały, to:
   - $<MAX / 2, MAX>$, gdzie $MAX = 10^8$
 
 
+Wykorzystane w tabelach oznaczenia:
+  * Czas przetwarzania - Elapsed Time w VTune wyrażony w sekundach
+  * Instructions Retired (IT) - liczba wywoływanych instrukcji kodu asemblera
+  * ClockTicks (CT) - liczba cykli procesorów w trakcie wykonywania kodu
+  * Ograniczenie wejścia (F-EB) - udział procentowy w ograniczeniu efektywności przetwarzania części wejściowej procesora
+  * Ograniczenie wyjścia (B-EB) - udział procentowy w ograniczeniu efektywności przetwarzania części wyjściowej procesora
+  * Ograniczenie systemu pamięci (MB) - udział procentowy w ograniczeniu efektywności przetwarzania systemu pamięci
+  * Ograniczenie jednostek wykonawczych (CB) - udział procentowy w ograniczeniu efektywności przetwarzania jednostek wykonawczych procesora
+  * Efektywne wykorzystanie rdzeni fizycznych procesora - procentowe wykorzystanie dostępnych zasobów w postaci rdzeni procesora
+
+
 ### Liczby pierwsze wyznaczane sekwencyjnie poprzez dzielenie oraz metodą sita (k1, k3, k3a)
 W poniższej tabeli znajdują się wyniki przetwarzania dla metod sekwencyjnych.
 
@@ -593,3 +605,11 @@ Równoległy algorytm wykorzystujący sito Erastothenes'a osiągnął czas okoł
 
 
 ## Wnioski
+Zauważyliśmy, że we wszystkich obliczeniach występuje niska efektywność zużycia wątków procesora. We wszystkich przypadkach ilość wykorzystanych wątków była mniejsza lub równa ilości rdzeni typu Performance procesora. Podejrzewamy, że jest to spowodowane nietypową architekturą nowych procesorów firmy Intel (Rysunek 1).
+
+  ***Rysunek 1: Efektywność zużycia wątków procesora***
+![Tabela7](images/coreUtilisation.png)
+
+Najszybciej efektywnym podejściem równoległym okazało się w naszym eksperymencie podejście domenowe. Algorytm ten nie jest najszybszy ze wszystkich badanych, jednak zapewnia najlepsze wykorzystanie rdzeni procesora dla wszystkich badanych instancji (zarówno dla 4 jak i 10 wątków). Ograniczenia, które mogą wpływać na efektywność, to duża liczba komunikacji i synchronizacji.
+
+Największą prędkością wyznaczania liczb pierwszych w podanym zakresie $<m, n>$ okazał się być algorytm `k4a`. Jest to algorytm sita równoległego funkcyjnego zmodyfikowany odpowiednio, aby uniknąć nadmiernych unieważnień pamięci. 
