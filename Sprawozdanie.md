@@ -60,14 +60,15 @@ W osobnym pliku nagłówkowym zostały zdefiniowane stałe takie jak:
 ~~~ { #consts .cpp caption="Stałe używane w programach"}
 #define M_VAL 2
 #define N_VAL 1000000
-#define THREADS_COUNT 8
-#define BLOCKSIZE 8
+#define THREADS_COUNT 10
+#define BLOCKSIZE 131072
 ~~~
 
 
 ### Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie w zakresie $<m, n>$ (k1)
 Poniższy kod to podejście sekwencyjne. Mierzony jest czas pracy procesora za pomocą zmiennych `spstart` i `spstop` oraz rzeczywisty czas pracy programu za pomocą `sswtime` i `sewtime`. Tablica `primeArray` przechowuje zmienne typu `bool` - pierwiastki liczby `n`, które są liczbami pierwszymi. Program metodą dzielenia wyznacza tablicę `primeArray`, po czym korzystając z wartości do niej wpisanych sprawdza wszystkie liczby z zakresu podanego w pliku nagłówkowym. Jeżeli dana liczba nie jest podzielna przez żaden z podzielników `n`, oznacza to, że jest to liczba pierwsza. W takim wypadku jest ona zapisywana do tablicy wynikowej `result`.
 
+  ***Kod 1. Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie***
 ~~~ { #K1 .cpp .numberLines caption="Kod 1. Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie"}
 
 #include <math.h>
@@ -126,6 +127,7 @@ int main(int argc, char *argv[]) {
 Poniższy blok to równoległa implementacja kodu z poprzedniego zadania. W tym celu użyta została biblioteka `OpenMP`. W określonym obszarze równoległym, każdemu z wątków zostaje przydzielona wartość iteratora pętli `i`, który przyjmuje wartości w przedziale $<m, n>$. W tej wersji programu możemy ustawić różne wartości klauzuli `schedule`. Przy wartości `static` wątkom zostaną przydzielone różne liczby z zakresu $<m, n>$, co oznacza, że niektóre wątki zbadają mniej liczb niż inne, jeżeli badane liczby będą wyjątkowo duże. Ten przydział może okazać się niesprawiedliwy i wpłynąć na czas wykonywania programu.   
 Jeżeli wątkom przydzielone zostałyby kolejne wartości `i` mógłby również wystąpić false-sharing. Oznacza to, że wątki mogłyby nadpisywać tą samą linię pamięci, co znacząco spowolniłoby program. W tym wypadku false-sharing pojawiłby się poprzez nadpisywanie części tablicy `result` znajdujących się w tych samych liniach pamięci.
 
+  ***Kod 2. Liczby pierwsze wyznaczane równolegle przez dzielenie***
 ~~~ { #K2 .cpp .numberLines caption="Kod 2. Liczby pierwsze wyznaczane równolegle przez dzielenie"}
 #include <math.h>
 #include <omp.h>
@@ -188,6 +190,7 @@ int main(int argc, char *argv[]) {
 ### Sito sekwencyjne bez lokalności dostępu do danych (k3)
 Poniższy kod to sekwencyjna implementacja algorytmu sita Erastothenesa. Pierwsza pętla programu ponownie wyznacza liczby pierwsze w zakresie $<2, n>$. Druga pętla identyfikuje liczby pierwsze w zakresie $<m, n>$ i oznacza jako liczby złożone ich wielokrotności. W ten sposób w tablicy wynikowej otrzymujemy jedynie liczby pierwsze.
 
+  ***Kod 3. Sito sekwencyjne bez lokalności dostępu do danych***
 ~~~ { #K3 .cpp .numberLines caption="Kod 3. Sito sekwencyjne bez lokalności dostępu do danych"}
 #include <math.h>
 #include <omp.h>
@@ -253,6 +256,7 @@ int main(int argc, char *argv[]) {
 ### Sito sekwencyjne z potencjalną lokalnością dostępu do danych (k3a)
 Poniższy kod przedstawia sekwencyjna implementację algorytmu sita Erastothenesa. Program został zmodyfikowany względem poprzednika. Została dodana lokalność dostępu do danych w oparciu o koncepcję lokalnego sita domenowego.
 
+  ***Kod 3a. Sito sekwencyjne z potencjalną lokalnością dostępu do danych***
 ~~~ { #K3a .cpp .numberLines caption="Kod 3a. Sito sekwencyjne z potencjalną lokalnością dostępu do danych"}
 #include <math.h>
 #include <omp.h>
@@ -332,6 +336,7 @@ int main(int argc, char *argv[]) {
 ### Sito równoległe funkcyjne bez lokalności dostępu do danych (k4)
 Poniższy kod to równoległa implementacja poprzedniego zadania znajdowania liczb pierwszych przy użyciu algorytmu sita Erastothenes'a. W podanym algorytmie występuje brak lokalności dostępu do danych, co spowodowane jest możliwością odczytywania przez wątki komórek tablicy `result`, które dzielą tą samą linię cache (występuje false-sharing). Działanie programu może zostać przez to znacząco spowolnione.
 
+  ***Kod 4. Sito równoległe funkcyjne bez lokalności dostępu do danych***
 ~~~ { #K4 .cpp .numberLines caption="Kod 4. Sito równoległe funkcyjne bez lokalności dostępu do danych"}
 #include <math.h>
 #include <omp.h>
@@ -402,6 +407,7 @@ int main() {
 ### Sito równoległe funkcyjne bez lokalności dostępu do danych (k4a)
 Jest to implementacja kodu z zadania poprzedniego, w której dodatkowo sprawdzana jest wartość tablicy `result` w komórce, do której program chciałby wpisać wartość `false`. Oznacza to, że możemy uniknąć wielu nadmiernych unieważnień pamięci oraz ograniczyć ilość prób niepotrzebnych zmian wartości tablicy wynikowej.
 
+  **Kod 4a. Sito równoległe funkcyjne bez lokalności dostępu do danych***
 ~~~ { #K4a .cpp .numberLines caption="Kod 4a. Sito równoległe funkcyjne bez lokalności dostępu do danych"}
 #include <math.h>
 #include <omp.h>
