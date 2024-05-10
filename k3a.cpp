@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (primeArray[i]) {
-      int firstMultiple = (m / j);
+      int firstMultiple = (m / i);
 
       if (firstMultiple <= 1) {
         firstMultiple = i + i;
