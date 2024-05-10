@@ -63,9 +63,59 @@ W osobnym pliku nagłówkowym zostały zdefiniowane stałe takie jak:
 
 ### Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie w zakresie <m, n> (k1)
 Poniższy kod to podejście sekwencyjne. Mierzony jest czas pracy procesora za pomocą zmiennych `spstart` i `spstop` oraz rzeczywisty czas pracy programu za pomocą `sswtime` i `sewtime`. Tablica `primeArray` przechowuje zmienne typu `bool` - pierwiastki liczby `n`, które są liczbami pierwszymi. Program metodą dzielenia wyznacza tablicę `primeArray`, po czym korzystając z wartości do niej wpisanych sprawdza wszystkie liczby z zakresu podanego w pliku nagłówkowym. Jeżeli dana liczba nie jest podzielna przez żaden z podzielników `n`, oznacza to, że jest to liczba pierwsza. W takim wypadku jest ona zapisywana do tablicy wynikowej `result`.
-```cpp
 
-```
+~~~ { #K1 .cpp caption="Kod 1. Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie"}
+
+#include <math.h>
+#include <omp.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#include "consts.h"
+
+int main(int argc, char *argv[]) {
+  long int m = M_VAL, n = N_VAL;
+  clock_t spstart, spstop;
+  double sswtime, sewtime;
+
+  bool *result = (bool *)malloc((n - m + 1) * sizeof(bool));
+  memset(result, true, (n - m + 1) * sizeof(bool));
+
+  bool *primeArray = (bool *)malloc((sqrt(n) + 1) * sizeof(bool));
+  memset(primeArray, true, (sqrt(n) + 1) * sizeof(bool));
+
+  sswtime = omp_get_wtime();
+  spstart = clock();
+
+  for (int i = 2; i * i <= n; i++) {
+    for (int j = 2; j * j <= i; j++) {
+      if (primeArray[j] == true && i % j == 0) {
+        primeArray[i] = false;
+        break;
+      }
+    }
+  }
+
+  for (int i = m; i <= n; i++) {
+    for (int j = 2; j * j <= i; j++) {
+      if (primeArray[j] == true && i % j == 0) {
+        result[i - m] = false;
+        break;
+      }
+    }
+  }
+
+  spstop = clock();
+  sewtime = omp_get_wtime();
+  printf("Dzielenie sekwencyjne:\n");
+  printf("Czas procesorow przetwarzania sekwencyjnego: %f sekund\n",
+         ((double)(spstop - spstart) / CLOCKS_PER_SEC));
+  printf("Czas trwania obliczen sekwencyjnych - wallclock: %f sekund\n",
+         sewtime - sswtime);
+}
+~~~
 
 
 ### Liczby pierwsze wyznaczane równolegle przez dzielenie w zakresie <m,n> (k2)
