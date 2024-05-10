@@ -1,0 +1,15 @@
+Using CPUID GenuineIntel-6-B7-1
+Warning:
+UNC_M_CAS_COUNT_RD[UNIT0] event is not supported by the kernel.
+Warning:
+UNC_M_CAS_COUNT_RD[UNIT1] event is not supported by the kernel.
+Warning:
+UNC_M_CAS_COUNT_WR[UNIT0] event is not supported by the kernel.
+Warning:
+UNC_M_CAS_COUNT_WR[UNIT1] event is not supported by the kernel.
+
+80368:perf-sync:ready:TSC=228990767157384
+failed to read counter UNC_M_CAS_COUNT_RD[UNIT0]
+failed to read counter UNC_M_CAS_COUNT_RD[UNIT1]
+failed to read counter UNC_M_CAS_COUNT_WR[UNIT0]
+failed to read counter UNC_M_CAS_COUNT_WR[UNIT1]

@@ -1,0 +1,393 @@
+
+82600 : 0xd08930a3a4c4 : 1 : spill_jit_data :  Jit agent is not initialized
+82586 : 0xd08930a4264a : 2 : ittapi_config_mask_get :  --itt-config mask to be applied: 55
+82586 : 0xd08930a45f5a : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_domain_create
+82586 : 0xd08930a46d53 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_module_load_with_sections
+82586 : 0xd08930a47edb : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_module_unload_with_sections
+82586 : 0xd08930a48a7d : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_string_handle_create
+82586 : 0xd08930a4923d : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_create
+82586 : 0xd08930a49910 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_create_typed
+82586 : 0xd08930a4a103 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_pause
+82586 : 0xd08930a4a8b6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_resume
+82586 : 0xd08930a560eb : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thread_set_name
+82586 : 0xd08930a56942 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thread_ignore
+82586 : 0xd08930a5707e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thr_name_set
+82586 : 0xd08930a577fc : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thr_ignore
+82586 : 0xd08930a58022 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_histogram_create
+82586 : 0xd08930a58a37 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_enable_attach
+82586 : 0xd08930a5921d : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_detach
+82586 : 0xd08930a59792 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_create
+
+82586 : 0xd08930a59df6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_rename
+
+82586 : 0xd08930a5a2a0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_destroy
+
+82586 : 0xd08930a5c1cb : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_prepare
+
+82586 : 0xd08930a5c795 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_cancel
+
+82586 : 0xd08930a5cc51 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_acquired
+
+82586 : 0xd08930a5d122 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_releasing
+
+82586 : 0xd08930a5db71 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_push
+82586 : 0xd08930a5e6bb : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_pop
+82586 : 0xd08930a5eef6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_mark_range
+82586 : 0xd08930a5f799 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_clear_range
+82586 : 0xd08930a5fc0b : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_prepare
+
+82586 : 0xd08930a6002d : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_cancel
+
+82586 : 0xd08930a61893 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_acquired
+
+82586 : 0xd08930a61d10 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_releasing
+
+82586 : 0xd08930a62255 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_begin
+
+82586 : 0xd08930a62700 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_end
+
+82586 : 0xd08930a62baf : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_begin
+
+82586 : 0xd08930a630a1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_end
+
+82586 : 0xd08930a635c1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_acquire
+
+82586 : 0xd08930a63afe : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_release
+
+82586 : 0xd08930a64019 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_record_allocation
+
+82586 : 0xd08930a643e5 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_record_deallocation
+
+82586 : 0xd08930a679b3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_induction_uses
+
+82586 : 0xd08930a67e4b : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_reduction_uses
+
+82586 : 0xd08930a68255 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_observe_uses
+
+82586 : 0xd08930a68626 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_clear_uses
+
+82586 : 0xd08930a689da : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_beginA
+
+82586 : 0xd08930a68d90 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_beginAL
+
+82586 : 0xd08930a69137 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_beginA
+
+82586 : 0xd08930a694e3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_beginAL
+
+82586 : 0xd08930a69883 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_iteration_taskA
+
+82586 : 0xd08930a69c1f : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_iteration_taskAL
+
+82586 : 0xd08930a6b3f8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_end_2
+
+82586 : 0xd08930a6b822 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_end_2
+
+82586 : 0xd08930a6bc44 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_acquire_2
+
+82586 : 0xd08930a6c011 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_release_2
+
+82586 : 0xd08930a6c3bb : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_aggregate_task
+
+82586 : 0xd08930a6c757 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_disable_push
+
+82586 : 0xd08930a6cae9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_disable_pop
+
+82586 : 0xd08930a6d278 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_function_create
+82586 : 0xd08930a6dae8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_allocate_begin
+82586 : 0xd08930a6e117 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_allocate_end
+82586 : 0xd08930a7098d : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_free_begin
+82586 : 0xd08930a7102c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_free_end
+82586 : 0xd08930a7170b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_reallocate_begin
+82586 : 0xd08930a71d2c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_reallocate_end
+82586 : 0xd08930a725e9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_internal_access_begin
+82586 : 0xd08930a72e4b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_internal_access_end
+82586 : 0xd08930a73612 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record_memory_growth_begin
+82586 : 0xd08930a73e5c : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record_memory_growth_end
+82586 : 0xd08930a74614 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_reset_detection
+82586 : 0xd08930a751c8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record
+82586 : 0xd08930a76ff3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_create
+82586 : 0xd08930a777f0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_destroy
+82586 : 0xd08930a77f36 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_get_timestamp
+82586 : 0xd08930a7872b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_region_begin
+82586 : 0xd08930a78e81 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_region_end
+82586 : 0xd08930a796ff : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_begin_v3
+82586 : 0xd08930a79dd8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_end_v3
+82586 : 0xd08930a7a4d6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_submit_v3
+82586 : 0xd08930a7adbf : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_group
+82586 : 0xd08930a7b4eb : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin
+82586 : 0xd08930a7d0a1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin_fn
+82586 : 0xd08930a7d88e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_end
+82586 : 0xd08930a7e142 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_inc_v3
+82586 : 0xd08930a7e9da : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_inc_delta_v3
+82586 : 0xd08930a7f1ac : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_dec_v3
+82586 : 0xd08930a7f8ed : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_dec_delta_v3
+82586 : 0xd08930a80204 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_marker
+82586 : 0xd08930a80a60 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_metadata_add
+82586 : 0xd08930a8130a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_str_add
+82586 : 0xd08930a81b15 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_to_current
+82586 : 0xd08930a837ab : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add
+82586 : 0xd08930a83eb1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_create
+82586 : 0xd08930a845e5 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_start
+82586 : 0xd08930a84cd5 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_end
+82586 : 0xd08930a8517e : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_set_name
+
+82586 : 0xd08930a856dd : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_name
+
+82586 : 0xd08930a85b5e : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_prepare
+
+82586 : 0xd08930a85f77 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_cancel
+
+82586 : 0xd08930a863cf : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_acquired
+
+82586 : 0xd08930a867cb : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_releasing
+
+82586 : 0xd08930a88f74 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_read
+82586 : 0xd08930a89818 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_write
+82586 : 0xd08930a89ff3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_update
+82586 : 0xd08930a8a889 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_state_get
+82586 : 0xd08930a8b02e : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_state_set
+82586 : 0xd08930a8b7b1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_obj_mode_set
+82586 : 0xd08930a8bf69 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_thr_mode_set
+82586 : 0xd08930a8c67b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_create
+82586 : 0xd08930a8cd95 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_pt_region_create
+82586 : 0xd08930a8d58b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_begin
+82586 : 0xd08930a8f0ee : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_end
+82586 : 0xd08930a8f9c5 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_destroy
+82586 : 0xd08930a90152 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_inc
+82586 : 0xd08930a90897 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_inc_delta
+82586 : 0xd08930a90f70 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_dec
+82586 : 0xd08930a916e1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_dec_delta
+82586 : 0xd08930a91d6b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_set_value
+82586 : 0xd08930a92552 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_set_value_ex
+82586 : 0xd08930a92cf9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_create
+82586 : 0xd08930a934f2 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark
+82586 : 0xd08930a951a8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_off
+82586 : 0xd08930a95a12 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_global
+82586 : 0xd08930a961e6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_global_off
+82586 : 0xd08930a96a8e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_caller_create
+82586 : 0xd08930a97254 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_caller_destroy
+82586 : 0xd08930a9796a : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_callee_enter
+82586 : 0xd08930a97ffb : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_callee_leave
+82586 : 0xd08930a98768 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_clock_domain_create
+82586 : 0xd08930a98fd7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_clock_domain_reset
+82586 : 0xd08930a997ba : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_create_ex
+82586 : 0xd08930a9beb3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_destroy_ex
+82586 : 0xd08930a9c715 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_ex
+82586 : 0xd08930a9ce4f : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_fn_ex
+82586 : 0xd08930a9d5ba : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_end_ex
+82586 : 0xd08930a9dd1b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin_overlapped
+82586 : 0xd08930a9e4ac : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_overlapped_ex
+82586 : 0xd08930a9ebb0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_end_overlapped
+82586 : 0xd08930a9f2cc : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_end_overlapped_ex
+82586 : 0xd08930a9fa2a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_marker_ex
+82586 : 0xd08930aa0305 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_add_with_scope
+82586 : 0xd08930aa1f90 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_str_add_with_scope
+82586 : 0xd08930aa27c1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_to_current_ex
+82586 : 0xd08930aa2f66 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_ex
+82586 : 0xd08930aa3712 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_track_group_create
+82586 : 0xd08930aa3e3a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_track_create
+82586 : 0xd08930aa461a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_set_track
+82586 : 0xd08930aa4d16 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_api_version
+82586 : 0xd08930aa54d8 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_av_save
+82586 : 0xd08930aa5bbd : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_module_load
+82586 : 0xd08930aa6373 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_module_unload
+82586 : 0xd08930aa7c3c : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_histogram_submit
+
+82586 : 0xd08930b1a1f4 : 2 : ittapi_config_mask_get :  --itt-config mask to be applied: 55
+82586 : 0xd08930b1ad5c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_domain_create
+82586 : 0xd08930b1b62f : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_module_load_with_sections
+82586 : 0xd08930b1bfc0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_module_unload_with_sections
+82586 : 0xd08930b1c779 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_string_handle_create
+82586 : 0xd08930b1ceb6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_create
+82586 : 0xd08930b1d5a3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_create_typed
+82586 : 0xd08930b1dd1c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_pause
+82586 : 0xd08930b1e430 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_resume
+82586 : 0xd08930b2086c : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_pause_scoped
+82586 : 0xd08930b21143 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_resume_scoped
+82586 : 0xd08930b219d9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thread_set_name
+82586 : 0xd08930b22136 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thread_ignore
+82586 : 0xd08930b22886 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thr_name_set
+82586 : 0xd08930b22fdb : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_thr_ignore
+82586 : 0xd08930b236aa : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_histogram_create
+82586 : 0xd08930b23d8f : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_create_v3
+82586 : 0xd08930b2457e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_bind_context_metadata_to_counter
+82586 : 0xd08930b24d68 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_enable_attach
+82586 : 0xd08930b2788b : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_detach
+82586 : 0xd08930b27e2b : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_create
+
+82586 : 0xd08930b283c3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_rename
+
+82586 : 0xd08930b28813 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_destroy
+
+82586 : 0xd08930b28cb6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_prepare
+
+82586 : 0xd08930b29118 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_cancel
+
+82586 : 0xd08930b29540 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_acquired
+
+82586 : 0xd08930b2997c : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_releasing
+
+82586 : 0xd08930b2a1af : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_push
+82586 : 0xd08930b2aabf : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_pop
+82586 : 0xd08930b2c773 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_mark_range
+82586 : 0xd08930b2d03a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_suppress_clear_range
+82586 : 0xd08930b2d4ef : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_prepare
+
+82586 : 0xd08930b2d939 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_cancel
+
+82586 : 0xd08930b2dd45 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_acquired
+
+82586 : 0xd08930b2e116 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_releasing
+
+82586 : 0xd08930b2e5bd : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_begin
+
+82586 : 0xd08930b2ea43 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_end
+
+82586 : 0xd08930b2ee93 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_begin
+
+82586 : 0xd08930b2f387 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_end
+
+82586 : 0xd08930b30b99 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_acquire
+
+82586 : 0xd08930b31125 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_release
+
+82586 : 0xd08930b315ce : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_record_allocation
+
+82586 : 0xd08930b31a30 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_record_deallocation
+
+82586 : 0xd08930b31df9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_induction_uses
+
+82586 : 0xd08930b3219d : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_reduction_uses
+
+82586 : 0xd08930b32537 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_observe_uses
+
+82586 : 0xd08930b328d1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_clear_uses
+
+82586 : 0xd08930b32c76 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_beginA
+
+82586 : 0xd08930b33006 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_beginAL
+
+82586 : 0xd08930b351a2 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_beginA
+
+82586 : 0xd08930b35606 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_beginAL
+
+82586 : 0xd08930b359fa : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_iteration_taskA
+
+82586 : 0xd08930b35dc2 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_iteration_taskAL
+
+82586 : 0xd08930b36183 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_site_end_2
+
+82586 : 0xd08930b36556 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_task_end_2
+
+82586 : 0xd08930b368fa : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_acquire_2
+
+82586 : 0xd08930b36c8e : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_lock_release_2
+
+82586 : 0xd08930b37028 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_aggregate_task
+
+82586 : 0xd08930b373c4 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_disable_push
+
+82586 : 0xd08930b38a84 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_model_disable_pop
+
+82586 : 0xd08930b3917c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_function_create
+82586 : 0xd08930b39911 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_allocate_begin
+82586 : 0xd08930b39f2e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_allocate_end
+82586 : 0xd08930b3a547 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_free_begin
+82586 : 0xd08930b3ab87 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_free_end
+82586 : 0xd08930b3b24e : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_reallocate_begin
+82586 : 0xd08930b3b82d : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_heap_reallocate_end
+82586 : 0xd08930b3c00d : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_internal_access_begin
+82586 : 0xd08930b3c84a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_internal_access_end
+82586 : 0xd08930b3e469 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record_memory_growth_begin
+82586 : 0xd08930b3ecd9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record_memory_growth_end
+82586 : 0xd08930b3f476 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_reset_detection
+82586 : 0xd08930b3fc34 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_heap_record
+82586 : 0xd08930b403b7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_create
+82586 : 0xd08930b40b9b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_destroy
+82586 : 0xd08930b41299 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_get_timestamp
+82586 : 0xd08930b41a06 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_region_begin
+82586 : 0xd08930b42179 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_region_end
+82586 : 0xd08930b428b1 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_begin_v3
+82586 : 0xd08930b44d71 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_end_v3
+82586 : 0xd08930b454d7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_submit_v3
+82586 : 0xd08930b45cea : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_group
+82586 : 0xd08930b4649c : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin
+82586 : 0xd08930b46c09 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin_fn
+82586 : 0xd08930b47310 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_end
+82586 : 0xd08930b47b05 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_inc_v3
+82586 : 0xd08930b482ac : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_inc_delta_v3
+82586 : 0xd08930b48a74 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_dec_v3
+82586 : 0xd08930b491d3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_dec_delta_v3
+82586 : 0xd08930b4ad81 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_marker
+82586 : 0xd08930b4b575 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_metadata_add
+82586 : 0xd08930b4be4a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_str_add
+82586 : 0xd08930b4c626 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_to_current
+82586 : 0xd08930b4ce4b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add
+82586 : 0xd08930b4d57f : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_create
+82586 : 0xd08930b4dc69 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_start
+82586 : 0xd08930b4e395 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_event_end
+82586 : 0xd08930b4e87d : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_sync_set_name
+
+82586 : 0xd08930b4ed03 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_name
+
+82586 : 0xd08930b50515 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_prepare
+
+82586 : 0xd08930b50a27 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_cancel
+
+82586 : 0xd08930b50e88 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_acquired
+
+82586 : 0xd08930b51304 : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_notify_sync_releasing
+
+82586 : 0xd08930b51af7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_read
+82586 : 0xd08930b5235a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_write
+82586 : 0xd08930b52bb0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_memory_update
+82586 : 0xd08930b5337c : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_state_get
+82586 : 0xd08930b53b2f : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_state_set
+82586 : 0xd08930b542d3 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_obj_mode_set
+82586 : 0xd08930b567a6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_thr_mode_set
+82586 : 0xd08930b56eaa : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_create
+82586 : 0xd08930b575b4 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_pt_region_create
+82586 : 0xd08930b57d03 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_begin
+82586 : 0xd08930b583b7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_frame_end
+82586 : 0xd08930b58bea : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_destroy
+82586 : 0xd08930b59323 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_inc
+82586 : 0xd08930b599c7 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_inc_delta
+82586 : 0xd08930b5a009 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_dec
+82586 : 0xd08930b5a68f : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_dec_delta
+82586 : 0xd08930b5c06a : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_set_value
+82586 : 0xd08930b5c8ce : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_counter_set_value_ex
+82586 : 0xd08930b5d049 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_create
+82586 : 0xd08930b5d892 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark
+82586 : 0xd08930b5e0ab : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_off
+82586 : 0xd08930b5e848 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_global
+82586 : 0xd08930b5f043 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_mark_global_off
+82586 : 0xd08930b5f821 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_caller_create
+82586 : 0xd08930b5ff21 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_caller_destroy
+82586 : 0xd08930b605f0 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_callee_enter
+82586 : 0xd08930b61fb6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_stack_callee_leave
+82586 : 0xd08930b62784 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_clock_domain_create
+82586 : 0xd08930b62f6e : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_clock_domain_reset
+82586 : 0xd08930b6377b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_create_ex
+82586 : 0xd08930b63f7e : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_id_destroy_ex
+82586 : 0xd08930b6473b : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_ex
+82586 : 0xd08930b64eaa : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_fn_ex
+82586 : 0xd08930b65615 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_end_ex
+82586 : 0xd08930b65cd6 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_begin_overlapped
+82586 : 0xd08930b66494 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_begin_overlapped_ex
+82586 : 0xd08930b67f45 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_task_end_overlapped
+82586 : 0xd08930b686e2 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_task_end_overlapped_ex
+82586 : 0xd08930b68e86 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_marker_ex
+82586 : 0xd08930b69695 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_add_with_scope
+82586 : 0xd08930b69e1c : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_metadata_str_add_with_scope
+82586 : 0xd08930b6a5a9 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_to_current_ex
+82586 : 0xd08930b6ad00 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_relation_add_ex
+82586 : 0xd08930b6b41a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_track_group_create
+82586 : 0xd08930b6bb5a : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_track_create
+82586 : 0xd08930b6c260 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_set_track
+82586 : 0xd08930b6e6da : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_api_version
+82586 : 0xd08930b6ef46 : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_av_save
+82586 : 0xd08930b6f623 : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_module_load
+82586 : 0xd08930b6fe3c : 2 : ittapi_config_apply_per_lib :  ITTAPI function not implemented: __itt_module_unload
+82586 : 0xd08930b702dd : 2 : ittapi_config_apply_per_lib :  ITTAPI function NOT instrumented (not matched by --itt-config option): __itt_histogram_submit
+
+82586 : 0xd08930b709bd : 2 : ittapi_config_apply_per_lib :  ITTAPI function instrumented: __itt_counter_set_value_v3

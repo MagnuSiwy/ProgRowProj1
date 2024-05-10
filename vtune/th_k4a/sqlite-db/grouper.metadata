@@ -39,6 +39,11 @@
     </standardMetrics>
     <customMetrics/>
    </entry>
+   <entry instanceTable="cpu_usage_data" correlationType="global">
+    <groupings>
+     <grouping path="attr.utilization"/>
+    </groupings>
+   </entry>
    <entry instanceTable="marker_global_data" correlationType="global">
     <groupings>
      <grouping path="attr"/>
@@ -70,6 +75,17 @@
  <grouper name="global_data_grouper" recommendedStorage="container">
   <entries>
    <entry instanceTable="concurrency_data" correlationType="global">
+    <groupings>
+     <grouping path="attr"/>
+    </groupings>
+    <standardMetrics>
+     <metric>time</metric>
+     <metric>count</metric>
+     <metric>instanceCount</metric>
+    </standardMetrics>
+    <customMetrics/>
+   </entry>
+   <entry instanceTable="cpu_usage_data" correlationType="global">
     <groupings>
      <grouping path="attr"/>
     </groupings>
@@ -141,6 +157,17 @@
  </grouper>
  <grouper name="parallel_region_metrics" recommendedStorage="container">
   <entries>
+   <entry instanceTable="cpu_usage_data" correlationType="global">
+    <groupings>
+     <grouping path="attr"/>
+    </groupings>
+    <standardMetrics>
+     <metric>time</metric>
+     <metric>count</metric>
+     <metric>instanceCount</metric>
+    </standardMetrics>
+    <customMetrics/>
+   </entry>
    <entry instanceTable="region_data" correlationType="global">
     <groupings>
      <grouping path="attr.bin.type.attributes"/>
@@ -174,6 +201,11 @@
      <metric>instanceCount</metric>
     </standardMetrics>
     <customMetrics/>
+   </entry>
+   <entry instanceTable="cpu_usage_data" correlationType="global">
+    <groupings>
+     <grouping path="attr.utilization"/>
+    </groupings>
    </entry>
   </entries>
  </grouper>
