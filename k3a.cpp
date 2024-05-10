@@ -30,29 +30,30 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  for (int i = 2; i * i <= n; i++) {
-    int low = m + blockSize;
-    int high = m + blockSize + blockSize;
-    if (high > n) {
-      high = n;
-    }
+  int low = m + blockSize;
+  int high = m + blockSize + blockSize;
+  if (high > n) {
+    high = n;
+  }
 
-    if (primeArray[i]) {
-      int firstMultiple = (m / i);
-
-      if (firstMultiple <= 1) {
-        firstMultiple = i + i;
-      } else if (m % i) {
-        firstMultiple = (firstMultiple * i) + i;
-      } else {
-        firstMultiple = (firstMultiple * i);
-      }
-
-      for (int j = firstMultiple; j <= n; j += i) {
-        result[j - m] = false;
+  for (int i = 0; i < numberOfBlocks; i++) {
+    for (int j = 2; j * j <= high; j++) {
+      if (primeArray[j]) {
+        int firstMultiple = (low / j);
+        if (firstMultiple <= 1) {
+          firstMultiple = j + j;
+        } else if (low % j) {
+          firstMultiple = (firstMultiple * j) + j;
+        } else {
+          firstMultiple = (firstMultiple * j);
+        }
+        for (int k = firstMultiple; k <= high; k += j) {
+          result[k - m] = false;
+        }
       }
     }
   }
+
 
   ppstop = clock();
   pewtime = omp_get_wtime();
