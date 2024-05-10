@@ -30,7 +30,6 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  int blockSize = BLOCKSIZE;
   int numberOfBlocks = (n - m) / blockSize;
   if ((n - m) % blockSize != 0) {
     numberOfBlocks++;
