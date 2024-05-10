@@ -52,9 +52,13 @@ W osobnym pliku nagłówkowym zostały zdefiniowane stałe takie jak:
   - Dolna granica poszukiwania liczb pierwszych `M_VAL`
   - Górna granica poszukiwania liczb pierwszych `N_VAL`
   - Liczba procesorów użyta do wykonania zadania równolegle 
-```cpp
 
-```
+~~~ { #consts .cpp caption="Stałe używane w programach"}
+#define M_VAL 2
+#define N_VAL 1000000
+#define THREADS_COUNT 8
+#define BLOCKSIZE 8
+~~~
 
 
 ### Liczby pierwsze wyznaczane sekwencyjnie przez dzielenie w zakresie <m, n> (k1)
