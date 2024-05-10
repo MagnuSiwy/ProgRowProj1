@@ -538,7 +538,7 @@ int main() {
 ~~~
 
 
-## Wnioski
+## Wyniki eksperymentu
 Aby przeprowadzić eksperyment obliczeniowo-pomiarowy, wykorzystaliśmy funkcję "Microarchitecture Exploration" dostępną w programie Intel VTune. Ta funkcja umożliwia analizę efektywności przetwarzania. W ramach tego trybu zbierane są dane podczas działania procesora za pomocą jednostek monitorujących wydajność.  
 Programy sekwencyjne zostały uruchomione jednokrotnie, a ich równoległe odpowiedniki w dwóch wariantach. Z racji, że procesor posiada 6 Performance-cores oraz 8 Efficient-cores postanowiliśmy uruchomić program dla ograniczonej części rdzeni typu Performance (Nie jesteśmy jednak pewni jakich rdzeni procesor używa w danym momencie, gdyż nie zostało to opisane), czyli dla 4 procesorów oraz dla połowy maksymalnej liczby procesorów logicznych, która wynosi 10.  
 
@@ -551,6 +551,45 @@ Przetwarzane przez nas przedziały, to:
 ### Liczby pierwsze wyznaczane sekwencyjnie poprzez dzielenie oraz metodą sita (k1, k3, k3a)
 W poniższej tabeli znajdują się wyniki przetwarzania dla metod sekwencyjnych.
 
+  ***Tabela 1: Tabela wartości parametrów dla algorytmu k1***
+![Tabela1](images/k1.png)
+
+  ***Tabela 2: Tabela wartości parametrów dla algorytmu k3***
+![Tabela3](images/k3.png)
+
+  ***Tabela 3: Tabela wartości parametrów dla algorytmu k3a***
+![Tabela4](images/k3a.png)
+
+Z powyższych tabeli wynika, że algorytm wyznaczający liczby pierwsze metodą sekwencyjną sposobem dzielenia jest 30 razy wolniejszy od algorytmu sita Erastothenesa. Jesteśmy w stanie uzyskać jeszcze lepsza wydajność stosując lokalność dostępu do danych, co widzimy w tabeli 3. Algorytm ten jest około 164 razy szybszy od sposobu dzielenia oraz około 5 razy szybszy od zwykłego sita. Wyniki te zostały uzyskane dla obliczeń w zakresie $<2, MAX>$. Dodatkowo możemy zauważyć, że ograniczenie systemu pamięci znacząco się zmniejsza w przypadku wersji kodu `k3a`.
+
 
 ### Liczby pierwsze wyznaczane równolegle poprzez dzielenie oraz metodą sita (k2, k4, k4a, k5)
-W poniższej tabeli znajdują się wyniki przetwarzania dla metod równoległych podejściem funkcyjnym (k2, k4, k4a) oraz domenowym (k5).
+W poniższej tabeli znajdują się wyniki przetwarzania dla metod równoległych podejściem funkcyjnym (`k2`, `k4`, `k4a`) oraz domenowym (`k5`).
+
+  ***Tabela 4: Tabela wartości parametrów dla algorytmu k2***
+![Tabela2](images/k2.png)
+
+  ***Tabela 5: Tabela wartości parametrów dla algorytmu k4***
+![Tabela5](images/k4.png)
+
+  ***Tabela 6: Tabela wartości parametrów dla algorytmu k4a***
+![Tabela6](images/k4a.png)
+
+  ***Tabela 7: Tabela wartości parametrów dla algorytmu k5***
+![Tabela7](images/k5.png)
+
+W tabelach 4, 5 oraz 6 zostało wykorzystane podejście funkcyjne. Oznacza to, że procesy otrzymują całą tablicę wykreśleń i fragment zbioru liczb pierwszych, których wielokrotności są usuwane. W tym podejściu najlepszy czas uzyskaliśmy przy użyciu 10 wątków dla instancji $<2, 10^8>$ algorytmu sita równoległego `k4a`. Czas ten jest około 273 razy mniejszy od najdłuższego czasu wykonywania, należącego do metody dzielenia równoległego (`k2`) oraz około 2 razy mniejszy od czasu wykonywania algorytmu `k4`. Najszybszy z algorytmów wykazuje się jednak znaczącym zwiększeniem ograniczenia systemu pamięci.
+
+Porównując powyżej opisane wyniki do podejścia domenowego, gdzie procesy otrzymują fragment tablicy wykreśleń i całą tablicę liczb
+pierwszych możemy zauważyć znacznie lepsze wykorzystanie rdzeni procesora. Jest to przedstawione w kolumnie `EPCU`. Dodatkowo zaobserwowany został zmniejszony narzut pamięci w stosunku do podejścia funkcyjnego. Nie zostały jednak zauważone zmniejszone czasy wykonywania algorytmów. 
+
+Zbadaliśmy różne warianty szeregowania pętli for i mimo lepszego wykorzystania wątków w szeregowaniu dynamic, lepsze czasy osiągnęliśmy stosując szeregowanie guided.
+
+
+### Podsumowanie wyników
+Podsumowując możemy zauważyć około 6-krotne przyspieszenie działania dla algorytmu równoległego względem sekwencyjnego wykorzystującego dzielenie do obliczenia liczb pierwszych z zakresu $<2, 10^8>$.
+
+Równoległy algorytm wykorzystujący sito Erastothenes'a osiągnął czas około 36 razy lepszy od wariantu sekwencyjnego dla instancji problemu szukającego liczb pierwszych w zakresie $<2, 10^8>$.
+
+
+## Wnioski
