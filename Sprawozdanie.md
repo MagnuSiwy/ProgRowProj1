@@ -29,7 +29,14 @@ Projekt polegał na zbadaniu efektywności przetwarzania równoległego w komput
 - Liczba procesorów fizycznych: 14
 - Liczba procesorów logicznych: 20
 - Oznaczenie typu procesora: KF
-- Wielkość pamięci podręcznej: 24 MB
+- Taktowanie procesora:
+  - Minimalne: 800MHz
+  - Maksymalne: 51000MHz
+- Wielkości pamięci podręcznej procesora: 
+  - L1d cache: 544 KiB (14 instancji)
+  - L1i cache: 704 KiB (14 instancji)
+  - L2 cache: 20 MiB (8 instancji)
+  - L3 cache: 24 MiB (1 instancja)
 - Organizacja pamięci podręcznej: Intel® Smart Cache
 
 ### System Operacyjny
